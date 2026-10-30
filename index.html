@@ -167,7 +167,7 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 6px; borde
   <div id="phases" style="display:grid;gap:20px"></div>
 
   <footer>
-    <div>Default light timings were read from video frame timestamps (±0.017 s for phases 1–2 at 60 fps, ±0.033 s for phase 3 at 30 fps). Default ball travel of 2.3 s was measured with a phone stopwatch.</div>
+    <div>Default light timings were read from video frame timestamps (±0.017 s, 60 fps video). Default ball travel of 2.3 s was measured with a phone stopwatch.</div>
     <div>Assumes the ball crosses the light instantly and the light keeps a steady rhythm.</div>
   </footer>
 </main>
@@ -176,7 +176,7 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 6px; borde
 const DEFAULTS = {
   ball: 2.3,
   reaction: 0.22,
-  phases: [{ on: 2.041, off: 2.169 }, { on: 0.925, off: 1.223 }, { on: 4.131, off: 12.426 }]
+  phases: [{ on: 2.041, off: 2.169 }, { on: 0.925, off: 1.223 }, { on: 1.059, off: 3.127 }]
 };
 const STORE = "skillShotTimer.v1";
 const NS = "http://www.w3.org/2000/svg";

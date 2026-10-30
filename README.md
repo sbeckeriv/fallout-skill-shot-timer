@@ -16,7 +16,7 @@ When to launch the ball so it rolls over the skill shot light while the light is
 |---|---|---|---|
 | 1 | 2.04 s | 2.17 s | 4.21 s |
 | 2 | 0.92 s | 1.22 s | 2.15 s |
-| 3 | 4.13 s | 12.43 s | 16.56 s |
+| 3 | 1.06 s | 3.13 s | 4.19 s |
 
 The light timings were read from video frame timestamps. Ball travel defaults to 2.3 s (phone stopwatch) and reaction time to 0.22 s.
 
