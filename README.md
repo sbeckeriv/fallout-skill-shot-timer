@@ -16,7 +16,7 @@ When to launch the ball so it rolls over the right inlane light while the light 
 |---|---|---|---|---|
 | 1 | 2.04 s | 2.17 s | 2.17 s | 0.89 s after the right light goes OFF |
 | 2 | 0.92 s | 1.22 s | 1.22 s | The moment the right light comes ON |
-| 3 | 1.06 s | 3.13 s | 1.06 s (est.) | The moment the left light comes ON |
+| 3 | 1.06 s | 3.11 s | 1.06 s (est.) | The moment the left light comes ON |
 
 The right-light timings were read from video frame timestamps. In phases 1–2 the left light is on exactly while the right is off. In phase 3 the pattern is right on, gap, left on, gap. The defaults assume both lights stay on equally long, with a 1.03 s gap on each side of the left light. Those are estimates; adjust them on the page. Ball travel defaults to 2.3 s (phone stopwatch) and reaction time to 0.22 s.
 
