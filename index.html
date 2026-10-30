@@ -178,7 +178,7 @@ footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 6px; borde
 
   <footer>
     <div>Default right-light timings were read from video frame timestamps (±0.017 s, 60 fps video). Default ball travel of 2.3 s was measured with a phone stopwatch.</div>
-    <div>Phases 1–2 assume the left light is on exactly while the right is off. The phase 3 gap (both lights off) is an estimate; adjust it to match the machine.</div>
+    <div>Phases 1–2 assume the left light is on exactly while the right is off. In phase 3 both lights are off between each change (right, gap, left, gap). The defaults assume both lights stay on equally long with equal gaps; adjust them to match the machine.</div>
     <div>Assumes the ball crosses the light instantly and the lights keep a steady rhythm.</div>
   </footer>
 </main>
@@ -192,10 +192,10 @@ const DEFAULTS = {
   phases: [
     { on: 2.041, off: 2.169, gapBefore: 0, gapAfter: 0 },
     { on: 0.925, off: 1.223, gapBefore: 0, gapAfter: 0 },
-    { on: 1.059, off: 3.127, gapBefore: 1.1, gapAfter: 0, estimate: true }
+    { on: 1.059, off: 3.127, gapBefore: 1.034, gapAfter: 1.034, estimate: true }
   ]
 };
-const STORE = "skillShotTimer.v2";
+const STORE = "skillShotTimer.v3";
 const NS = "http://www.w3.org/2000/svg";
 
 let state = load();
@@ -261,7 +261,7 @@ function plan(p) {
   opts.sort((x, y) => x.press - y.press);
   const o = opts[0];
   const extra = o.press - state.reaction;
-  const now = extra < 0.1;
+  const now = extra < 0.15;
   const rel = (x) => (x < 0 ? fmt(-x) + " before" : fmt(x) + " after");
   return {
     ...o, C,
